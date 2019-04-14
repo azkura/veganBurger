@@ -44,10 +44,10 @@ export default {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
 
-    [
-      'storyblok-nuxt',
-      { accessToken: ' cQ1JsieywTcN1N3O4ioSYAtt ',  cacheProvider: ' memory' }
-    ]
+   [
+      "storyblok-nuxt",
+      { accessToken: "cQ1JsieywTcN1N3O4ioSYAtt", cacheProvider: "memory" }
+    ]   
   ],
   /*
   ** Axios module configuration
