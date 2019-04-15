@@ -2,7 +2,11 @@
     <article  class="post-preview">
         <div class="post-preview-content">
             <h1>{{ title }}</h1>
+            <span>{{datePost}}</span>
             <p>{{ excerpt }}</p>
+            <nuxt-link to="">
+                <a>continuer la lecture...</a>
+            </nuxt-link>
         </div>
         <div 
         class="post-preview-thumbnail"
@@ -12,6 +16,8 @@
 </template>
 
 <script>
+import moment from 'moment'
+moment.locale('fr')
 
 export default {
     
@@ -32,32 +38,44 @@ export default {
             type:String,
             required:true
         }
+    },
+
+    data(){
+        return {
+            datePost: moment().format('MMM Do')
+        }
     }
 }
 </script>
 
 <style scoped>
 .post-preview {
-
     position: relative;
-    text-align: center;
-    border-radius: 3px;
-    border: 1px solid #A9A9A9;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border: 1px #696969;
+    box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.2);
     width: 90%; 
     margin: 4rem;
     height: 15rem;  
-    display: flex; 
-    flex-direction:row;
+    display: flex;    
 }
 .post-preview-thumbnail{
     background-size: cover;
     background-position:center;
     width: 50%;
+    border-radius: 4px;
 }
 .post-preview-content{
-    text-align: center;
-    padding: 1rem;
+    text-align:left;
+    padding: 1rem; 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+span{
+   font-size: smaller;
+    color: #A9A9A9;
 }
 @media (min-width: 35rem){
     .post-preview{

@@ -12,9 +12,7 @@
         </div> 
         <div class="linked">
             <nuxt-link to="stars/">
-                <a>
-                    <p>continuer à lire....</p>
-                </a>
+                <a>continuer à lire....</a>
             </nuxt-link>
         </div>
     </article>

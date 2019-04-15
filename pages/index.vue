@@ -47,12 +47,13 @@ export default {
 </script>
 
 <style>
+
 #posts{
   padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
- /* flex-direction: column;*/
+  flex-direction: row;
 }
 @media (min-width: 35rem){
   #post{
