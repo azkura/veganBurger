@@ -1,31 +1,35 @@
 <template>
-  <nuxt-link :to="'/stars/' + id"
-    class="post-preview">
-        <article class="container">
-            <div 
-            class="post-preview-thumbnail"
-            :style="{ backgroundImage: 'url('+ thumbnailUrl +')' }">
-            </div>
-            <div class="post-preview-title">
-                <h1>{{ title }}</h1>
-            </div>
-            <div class="post-preview-content">
-                <p>{{ excerpt }}</p>
-            </div>  
-        </article>
-    </nuxt-link>
-    
+    <article class="container">
+        <div 
+        class="post-preview-thumbnail"
+        :style="{ backgroundImage: 'url('+ thumbnailUrl +')' }">
+        </div>
+        <div class="post-preview-title">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="post-preview-content">
+            <p>{{ resume }}</p>
+        </div> 
+        <div class="linked">
+            <nuxt-link to="stars/">
+                <a>
+                    <p>continuer à lire....</p>
+                </a>
+            </nuxt-link>
+        </div>
+    </article>
 </template>
 
 <script>
-export default {
 
+export default {
+    
     props:{
         title:{
             type: String,
             required: true
         },
-        excerpt:{
+        resume:{
             type: String,
             required: true
         },
@@ -41,12 +45,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .container{
     position: relative;
     text-align: center;
-  color: white;
+    color: white;
     border-radius: 3px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     background:  rgba(0, 0, 0, 0.8);
@@ -67,22 +71,26 @@ export default {
     padding-top: 40px;
     text-align: center;
     font-style: italic;
-
 }
-.post-preview-content{
+.post-preview-content,
+.linked{
     padding-top: 20px;
     text-align: center;
     font-size: large;
     font-style: italic;
-  
-   
 }
- /*a{
+a p{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: bolder;
 }
+@media (min-width: 35rem){
+    .post-preview{
+        width: 25rem;
+    }
+} 
 
-.post-preview {
+/*.post-preview {
     border-radius: 3px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     width: 90%;

@@ -1,8 +1,5 @@
 <template>
-  <section>
-  <!--    <PostPreview />  
-      <Hamburg />  -->
-      <article id="posts">
+    <article>
       <Posted
         v-for="post in posts"
         :key="post.id"
@@ -11,22 +8,18 @@
         :thumbnailImage="post.thumbnailImage"
         :id="post.id"/>
     </article>
-  </section>
 </template>
 
 <script>
-
-import PostPreview from '~/components/PostPreview.vue'
 import Posted from '~/components/Posted.vue'
 
 export default {
 
-  components:{
-    PostPreview,
-    Posted
-  },
+    components:{
+        Posted
+    },
 
-   asyncData(context){
+    asyncData(context){
         return context.app.$storyapi.get('cdn/stories', {
             version: 'draft' ,  starts_with: 'preview/'
         }).then( res => {
@@ -42,24 +35,6 @@ export default {
             }
         })
     } 
-  
 }
 </script>
-
-<style>
-#posts{
-  padding-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- /* flex-direction: column;*/
-}
-@media (min-width: 35rem){
-  #post{
-    flex-direction: row;
-  }
-}
-
-</style>
-
 
