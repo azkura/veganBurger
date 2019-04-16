@@ -54,8 +54,9 @@ export default {
     border-radius: 4px;
     border: 1px #696969;
     box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.2);
-    width: 90%; 
-    margin: 4rem;
+   /* width: 90%;  */
+  /*  margin: 4rem; */
+  margin-top: 3rem;
     height: 15rem;  
     display: flex;    
 }
@@ -68,6 +69,7 @@ export default {
 .post-preview-content{
     text-align:left;
     padding: 1rem; 
+   /* margin: 3rem; */
 }
 a{
     text-decoration: none;

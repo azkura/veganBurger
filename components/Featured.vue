@@ -46,14 +46,14 @@ export default {
 <style scoped>
 
 .container{
-    position: relative;
+    position: relative; 
     text-align: center;
     color: white;
     border-radius: 3px;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
     background:  rgba(0, 0, 0, 0.8);
-    width: 90%;
-    margin: 4rem;
+    width: 100%;
+ /*   margin: 4rem;  */
     height: 20rem;  
 }
 .post-preview-thumbnail{

@@ -1,7 +1,12 @@
 <template>
-  <section>
-  <!--    <PostPreview />  
-      <Hamburg />  -->
+  <section class="container">
+      <article id="feat">
+        <Featured 
+          :id="id"
+          :title="title"
+          :resume="resume"
+          :thumbnail="thumbnail"/>
+      </article>
       <article id="posts">
       <Posted
         v-for="post in posts"
@@ -16,13 +21,13 @@
 
 <script>
 
-import PostPreview from '~/components/PostPreview.vue'
+import Featured from '~/components/Featured.vue'
 import Posted from '~/components/Posted.vue'
 
 export default {
 
   components:{
-    PostPreview,
+    Featured,
     Posted
   },
 
@@ -42,25 +47,26 @@ export default {
             }
         })
     } 
-  
 }
 </script>
 
 <style>
 
 #posts{
-  padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+#feat{
+  margin-top: -50px;
+ /* margin-bottom: -60px; */
 }
 @media (min-width: 35rem){
   #post{
     flex-direction: row;
   }
 }
-
 </style>
 
 

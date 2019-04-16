@@ -14,7 +14,9 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Quicksand:400,700'},
+      { href:"https://fonts.googleapis.com/css?family=Pacifico", rel:"stylesheet"}
     ]
   },
 
@@ -43,6 +45,18 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
+
+    [
+      'nuxt-fontawesome', {
+      component: 'fa', 
+      imports: [
+        //import whole set
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['fas',]
+        }
+      ]
+    }],
 
    [
       "storyblok-nuxt",
