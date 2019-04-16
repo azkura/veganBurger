@@ -56,7 +56,7 @@ export default {
     box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.2);
    /* width: 90%;  */
   /*  margin: 4rem; */
-  margin-top: 3rem;
+    margin-top: 3rem;
     height: 15rem;  
     display: flex;    
 }
