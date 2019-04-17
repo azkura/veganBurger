@@ -68,9 +68,11 @@ export default {
   color: #00A000;
 }
 .menu .input{
-    font-size: 25px;
-    border: none;
-    outline:#00A000;
+    font-size: 18px;
+    border: 1px solid  #00A000;
+    border-radius: 4px;
+    
+
 }
 .menu .search-container .search {
     background: #fffff0;
@@ -88,12 +90,12 @@ export default {
     background: #fff;
     color: #A0A0A0;
     font-size: 17px;
-    border: 1px solid #A0A0A0;
+    border: 1px solid #00A000;
     border-radius: 3px;
     cursor: pointer;
     outline: none;
 }
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .menu .search-container {
         float: none;
     }
@@ -108,5 +110,5 @@ export default {
     .menu input[type=text] {
         border: 1px solid #ccc;  
     }
-}
+}  */
 </style>
