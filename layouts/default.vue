@@ -3,20 +3,22 @@
     <TheHeader />
     <SubMenu />
     <nuxt class="main-content"/>
-    <TheHeader />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 import TheHeader from '~/components/TheHeader.vue'
 import SubMenu from '~/components/SubMenu.vue'
+import TheFooter from '~/components/TheFooter.vue'
 
 
 export default {
 
   components:{
     TheHeader,
-    SubMenu
+    SubMenu,
+    TheFooter
   }
 }
 </script>
@@ -31,6 +33,7 @@ body{
   margin: 0;
 }
 .main-content{
+
   margin-top: 5rem;
   margin-bottom: 10rem;
 }

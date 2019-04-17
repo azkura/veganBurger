@@ -17,7 +17,7 @@
 <style scoped>
 
 .main-header{
-  /*  margin-top: 50px; */
+    margin-top: 50px; 
     position: relative;
     width: 100%;
     height: 3.5rem;
@@ -49,6 +49,7 @@
     text-decoration: none;
     color: #A0A0A0;
     margin: 1rem;
+    font-family: 'Permanent Marker', cursive;
 }
 .nav-link a:hover,
 .nav-link a:active,

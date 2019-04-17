@@ -16,7 +16,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Quicksand:400,700'},
-      { href:"https://fonts.googleapis.com/css?family=Pacifico", rel:"stylesheet"}
+      { href:"https://fonts.googleapis.com/css?family=Permanent+Marker", rel:"stylesheet"}
     ]
   },
 
@@ -48,16 +48,18 @@ export default {
 
     [
       'nuxt-fontawesome', {
-      component: 'fa', 
-      imports: [
-        //import whole set
-        {
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['fas',]
-        }
-      ]
-    }],
-
+        imports: [
+         {
+           set: '@fortawesome/free-solid-svg-icons',
+           icons: ['fas']
+         },
+         {
+           set:'@fortawesome/free-brands-svg-icons',
+           icons: ['fab']
+         }
+       ]
+      }
+    ],
    [
       "storyblok-nuxt",
       { accessToken: "cQ1JsieywTcN1N3O4ioSYAtt", cacheProvider: "memory" }

@@ -54,6 +54,7 @@ export default {
     border-radius: 4px;
     border: 1px #696969;
     box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.2);
+    background: #fffff0;
    /* width: 90%;  */
   /*  margin: 4rem; */
     margin-top: 3rem;
