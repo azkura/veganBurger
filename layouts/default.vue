@@ -3,14 +3,14 @@
     <TheHeader />
     <SubMenu />
     <nuxt class="main-content"/>
-    <TheFooter />
+    <SubFooter />
   </div>
 </template>
 
 <script>
 import TheHeader from '~/components/TheHeader.vue'
 import SubMenu from '~/components/SubMenu.vue'
-import TheFooter from '~/components/TheFooter.vue'
+import SubFooter from '~/components/SubFooter.vue'
 
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components:{
     TheHeader,
     SubMenu,
-    TheFooter
+    SubFooter
   }
 }
 </script>
