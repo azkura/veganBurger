@@ -53,7 +53,6 @@
     border-radius: 3px;
     cursor: pointer;
     outline: none;
-    
 }
 .icon-search{
     color: #A0A0A0;

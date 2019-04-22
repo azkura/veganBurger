@@ -1,28 +1,29 @@
 <template>
 <footer class="footer">
     <nav class="container">
-
-    </nav>
-
-
-
-
-
-
-
-
-<!--    <nav class="footer-nav">
-        <div class=".social-media">
+        <div class="about-us">
             <nuxt-link class="home-logo" to=""><a>veg | Ham </a></nuxt-link>
             <p class="devise">another way to eat burgers!
                 <br>eat fast but healthy
             </p>
-            <ul class="social-media-list">
-                <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'twitter']"/></a></nuxt-link>
-                <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'facebook']"/></a></nuxt-link>
-                <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fas', 'camera-retro']"/></a></nuxt-link>
-                <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'youtube-square']"/></a></nuxt-link>
-            </ul>
+        </div>
+        <div class="social-media-link">
+            <div class="medias">
+                <ul class="social-media-list">
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'twitter']"/></a></nuxt-link>
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'facebook']"/></a></nuxt-link>
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fas', 'camera-retro']"/></a></nuxt-link>
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'youtube-square']"/></a></nuxt-link>
+                </ul>
+            </div>
+            <div>
+                <ul class="sponsors">
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'tripadvisor']"/></a></nuxt-link>
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'airbnb']"/></a></nuxt-link>
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'stripe']"/></a></nuxt-link>
+                    <nuxt-link class="media-link" to="" tag="li"><a class="icon"><font-awesome-icon :icon="['fab', 'linkedin']"/></a></nuxt-link>
+                </ul>
+            </div>    
         </div>
         <div class="contact">
             <ul class="contact-links">
@@ -32,14 +33,7 @@
                 <nuxt-link class="contact-link" to="" tag="li"><a class="link">faq</a></nuxt-link>
             </ul>
         </div>
-        <div class="sponsor">
-            <ul class="sponsor-list">
-                <li class="fa"><font-awesome-icon :icon="['fab', 'tripadvisor']"/></li>
-                <li class="fa"><font-awesome-icon :icon="['fab', 'airbnb']"/></li>
-                <li class="fa"><font-awesome-icon :icon="['fab', 'stripe']"/></li>
-            </ul>
-        </div>
-    </nav> -->
+    </nav>
 </footer>
 </template>
 
@@ -48,43 +42,33 @@
     width: 100%;
     background-color: #fffff0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.footer-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 150px;
+}
+.home-logo {
+    font-family: 'Permanent Marker', cursive;
+    color: #00A000;
+}
+.devise,
+.contact-link {
+    font-family: 'Permanent Marker', cursive;
+    color: #A8A8A8;
+}
+.social-media-link{
     height: 100%;
 }
-.social-media{
-
+.social-media-list,
+.sponsors{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-/*.social-media,
-.social-media-list {
-    float: left;
-} */
-/*.social-media-list{
+.media-link,
+.contact-link{
     list-style: none;
- *   margin: 0;
-    padding: 0; *
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.media-link{
-    padding: 0.2rem;
 }
 .icon{
     display: block;
@@ -94,58 +78,24 @@
     border-radius: 50%;
     color: #00A000;   
 }
-.home-logo {
-    font-family: 'Permanent Marker', cursive;
-    color: #00A000;
-  /*  padding: 10px 1em 0 2em; *
-}
-.devise {
- /*   margin-top: 0;
-    margin-bottom: 0rem;  *
-    font-family: 'Permanent Marker', cursive;
-    color: #A8A8A8;
-   /* padding: 10px 1em 0 2em;  *
-}
-/*.contact{
-    float: right;
-    
-}*
-.contact-links{
-    display: block;
-    margin-left: 450px;
+.contact{
     height: 100%;
-    padding: 1px;
 }
-.contact-link{
-    list-style: none;
+.contact-links{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: center;
 }
-.contact-link .link{
-    color: #A8A8A8;
-    font-family: 'Permanent Marker', cursive;
+ .contact-link .link{
     text-decoration: none;
+    color: #A8A8A8;
 }
 .contact-link .link:active,
 .contact-link .link:hover{
     color: #00A000;
 }
-.sponsor-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-/*.sponsor .fa{
-   
-} *
-.fa {
-    display: block;
-    padding: 5px;
-    font-size: 30px;
-    width: 50px;
-    text-decoration: none;
-    list-style: none;
-    color: #00A000;
-} */
+
 </style>
 
 

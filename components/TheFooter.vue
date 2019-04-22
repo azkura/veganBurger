@@ -35,7 +35,7 @@ export default {
     bottom: 0;
     width: 100%;
     background-color: #FCF4A3;
-    height: 3rem;
+    /*height: 3rem; */
 }
 .copyright{
     height: 100%;

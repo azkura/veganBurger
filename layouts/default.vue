@@ -4,6 +4,7 @@
     <SubMenu />
     <nuxt class="main-content"/>
     <SubFooter />
+    <TheFooter />
   </div>
 </template>
 
