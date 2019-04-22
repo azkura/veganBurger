@@ -1,10 +1,10 @@
 <template>
   <div>
-    <TheHeader />
-    <SubMenu />
+    
+   
     <nuxt class="main-content"/>
-    <SubFooter />
-    <TheFooter />
+    
+  
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <article  class="post-preview">
+    <div  class="post-preview">
         <div class="post-preview-content">
             <h1>{{ title }}</h1>
             <span>{{datePost}}</span>
@@ -12,7 +12,7 @@
         class="post-preview-thumbnail"
         :style="{ backgroundImage: 'url('+ thumbnailImage +')' }">
         </div>
-    </article>
+    </div>
 </template>
 
 <script>
@@ -55,15 +55,9 @@ export default {
     border: 1px #696969;
     box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.2);
     background: #fffff0;
-   /* width: 90%;  */
-  /*  margin: 4rem; */
-  /*  margin-top: 3rem;
-    margin-left: 3rem; */
-    height: 15rem;  
-    display: flex;   
-    padding: 1.5em; 
- 
-
+  /*  width: 90%;  */
+    margin: 1rem;  
+    height: 15rem;
 }
 .post-preview-thumbnail{
     background-size: cover;
