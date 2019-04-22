@@ -4,7 +4,6 @@
     <SubMenu />
     <nuxt class="main-content"/>
     <SubFooter />
-    <TheFooter />
   </div>
 </template>
 
@@ -33,7 +32,8 @@ export default {
 }
 body{
   font-family: 'Quicksand', sans-serif;
-  margin: 0;
+  /*margin: 0; */
+  height: 100%;
 }
 .main-content{
 

@@ -5,8 +5,8 @@
             <nuxt-link to="/blog" tag="li" class="right">
                 <a>{{date}}© all reserved |  made by az</a>
             </nuxt-link>
-            <nuxt-link to="" tag="li" class="right">
-                <a><font-awesome-icon :icon="['fab', 'medapps']"/></a>
+             <nuxt-link to="" tag="li" class="right">
+                <a><font-awesome-icon :icon="['fab', 'github']"/></a>
             </nuxt-link>
         </ul>
     </div>

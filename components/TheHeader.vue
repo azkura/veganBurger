@@ -1,92 +1,51 @@
 <template>
 <header class="header">
-    <nav class="nav-menu">
+    <nav class="container">
         <div class="menu">
             <nuxt-link to=""><a class="home">VEG | HAM </a></nuxt-link>
-            <div class="search-container">
-                <form>
-                    <input type="text" class="input">
-                    <button type="submit" class="search"><font-awesome-icon icon="search" /></button>
-                </form>
-                <nuxt-link to="" class="sign"><button>sign in</button></nuxt-link>
-                <nuxt-link to="" class="sign"><button>sign out</button></nuxt-link>
-                <nuxt-link to="" class="sign"><button>subscrire</button></nuxt-link>
-            </div>
         </div>
+        <div class="search">
+            <form>
+                <input type="text" class="input">
+            </form>
+             <button type="submit" class="icon-search"><font-awesome-icon :icon="['fas', 'search']"/></button>
+        </div>
+        <div class="sign">
+            <nuxt-link to="" class="sign"><button class="connect">sign in</button></nuxt-link>
+            <nuxt-link to="" class="sign"><button class="connect">sign out</button></nuxt-link>
+            <nuxt-link to="" class="sign"><button class="connect">subscrire</button></nuxt-link>
+         </div>
     </nav>
 </header>
 </template>
 
-<script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faSearch)
-
-export default {
-    components:{
-        FontAwesomeIcon
-    },
-}
-</script>
-
 <style scoped>
-.menu {
-    position:fixed;
+
+.header{
+    height: 100%;
     background: #fffff0;
     top: 0;
     left: 0;
-    width: 100%;
-    border-bottom: 1px solid #A8A8A8;
-    height: 3.5rem;
-    overflow: hidden;
 }
-.menu a.home {
-    float: left;
-    display: block;
-    color: #00A000;
-    text-align: center;
-    text-decoration: none;
-    padding: 5px 35px;
-    font-size: 30px;
-    font-family: 'Permanent Marker', cursive;
-
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-auto-rows: 50px; 
 }
-.menu .search-container,
-.menu a.sign{
-    float: right;
+.menu,.search{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+}
+.sign{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     align-items: center;
-    justify-content: center;
-    color: #A0A0A0;
     text-decoration: none;
-    padding: 8px 35px;
-    font-size: 17px;
 }
-.menu button:hover,
-.menu button:active{
-  color: #00A000;
-}
-.menu .input{
-    font-size: 18px;
-    border: 1px solid  #00A000;
-    border-radius: 4px;
-    
-
-}
-.menu .search-container .search {
-    background: #fffff0;
-    color: #A0A0A0;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-.menu .search-container .search:active,
-.menu .search-container .search:hover{
-    color: #00A000;
-}
-.menu button{
+.connect{
     background: #fff;
     color: #A0A0A0;
     font-size: 17px;
@@ -94,21 +53,34 @@ export default {
     border-radius: 3px;
     cursor: pointer;
     outline: none;
+    
 }
-/*@media screen and (max-width: 600px) {
-    .menu .search-container {
-        float: none;
-    }
-    .menu a, .menu input[type=text], .menu .search-container button {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-    }
-    .menu input[type=text] {
-        border: 1px solid #ccc;  
-    }
-}  */
+.icon-search{
+    color: #A0A0A0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+.input{
+    border: none;
+    width: 220px;
+    height: 30px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #00A000;
+}
+.menu a.home{
+    color: #00A000;
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+a{
+    text-decoration: none; 
+}
+button:hover,
+button:active {
+    color: #00A000;
+}
+
 </style>

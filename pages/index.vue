@@ -57,9 +57,11 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding: 2rem;
 }
 #feat{
-  margin-top: -50px;
+  padding: 2rem;
+ /* margin-top: -50px; */
  /* margin-bottom: -60px; */
 }
 @media (min-width: 35rem){

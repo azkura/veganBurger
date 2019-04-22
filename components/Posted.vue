@@ -57,9 +57,13 @@ export default {
     background: #fffff0;
    /* width: 90%;  */
   /*  margin: 4rem; */
-    margin-top: 3rem;
+  /*  margin-top: 3rem;
+    margin-left: 3rem; */
     height: 15rem;  
-    display: flex;    
+    display: flex;   
+    padding: 1.5em; 
+ 
+
 }
 .post-preview-thumbnail{
     background-size: cover;
@@ -70,11 +74,15 @@ export default {
 .post-preview-content{
     text-align:left;
     padding: 1rem; 
+    color: #A0A0A0;
    /* margin: 3rem; */
+}
+.post-preview-content h1{
+    font-family: 'Permanent Marker', cursive;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #A0A0A0;
 }
 span{
    font-size: smaller;
