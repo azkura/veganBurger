@@ -1,8 +1,16 @@
 <template>
 
 <div class="grid-container">
-  <div class="item1">Header</div>
-  <div class="item2">Menu</div>
+  <div class="item1">
+    <subMenu />
+  </div>
+  <div class="item2">
+    <Featured 
+        :id="id"
+        :title="title"
+        :resume="resume"
+        :thumbnail="thumbnail"/>
+  </div>
   <div class="item3">
       <Posted 
         v-for="post in posts"
@@ -20,11 +28,15 @@
 
 <script>
 
+import subMenu from '~/components/subMenu.vue'
 import Posted from '~/components/Posted.vue'
+import Featured from '~/components/Featured.vue'
 
 export default {
     components:{
-    Posted
+    Posted,
+    Featured,
+    subMenu
   },
 
   asyncData(context){
@@ -57,27 +69,27 @@ export default {
     'menu menu menu menu menu menu'
     '. . main main . .'
     'footer footer footer footer footer footer';
+
   grid-gap: 10px;
   background-color: #2196F3;
   padding: 10px;
 }
 
 .item1 { grid-area: header; }
-.item2 { grid-area: menu; }
+
+.item2 { 
+  grid-area: menu; 
+}
 .item3 { 
   grid-area: main; 
-  
+
   display:flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .item4 { grid-area: right; }
 .item5 { grid-area: footer; }
-
-.post{
-  
-  
-}
 
 </style>
 

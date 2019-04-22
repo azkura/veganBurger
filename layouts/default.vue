@@ -1,27 +1,15 @@
 <template>
   <div>
-    
-   
     <nuxt class="main-content"/>
-    
-  
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue'
-import SubMenu from '~/components/SubMenu.vue'
-import SubFooter from '~/components/SubFooter.vue'
-import TheFooter from '~/components/TheFooter.vue'
-
 
 export default {
 
   components:{
-    TheHeader,
-    SubMenu,
-    SubFooter,
-    TheFooter
+    
   }
 }
 </script>
