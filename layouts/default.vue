@@ -1,15 +1,24 @@
 <template>
   <div>
+    <TheHeader />
     <nuxt class="main-content"/>
+    <subFooter />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 
+import TheHeader from '~/components/TheHeader.vue'
+import subFooter from '~/components/subFooter.vue'
+import TheFooter from '~/components/TheFooter.vue'
+
 export default {
 
   components:{
-    
+    TheHeader,
+    subFooter,
+    TheFooter
   }
 }
 </script>

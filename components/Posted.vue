@@ -55,9 +55,9 @@ export default {
     border: 1px #696969;
     box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.2);
     background: #fffff0;
-  /*  width: 90%;  */
+   /* width: 90%; 
     margin: 1rem;  
-    height: 15rem;
+    height: 15rem;  */
 }
 .post-preview-thumbnail{
     background-size: cover;
